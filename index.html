@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calgary's Premier Roofing Contractor</title>
+    <meta name="description" content="Calgary's trusted roofing experts delivering quality craftsmanship, service, and respect">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100" x-data="{ isOpen: false }">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-gray-800">
+                    Premier Roofing
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Features</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Benefits</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">FAQ</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="isOpen = !isOpen" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden" x-show="isOpen" @click.away="isOpen = false">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">Features</a>
+                    <a href="#benefits" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">Benefits</a>
+                    <a href="#faq" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">FAQ</a>
+                    <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-br from-blue-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
+                    Calgary's Premier Roofing Contractor
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-12">
+                    Our goal is to continually provide the highest level of quality in everything we do
+                </p>
+                <a href="https://calgaryspremierroofer.com" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Get Your Free Quote
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Sets Us Apart</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Ethical -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Ethical Practices</h3>
+                    <p class="text-gray-600 leading-relaxed">We maintain the highest standards of integrity in all our business practices.</p>
+                </div>
+
+                <!-- Safety -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Safety First</h3>
+                    <p class="text-gray-600 leading-relaxed">Your safety and our team's safety is our top priority on every project.</p>
+                </div>
+
+                <!-- Accountable -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Accountability</h3>
+                    <p class="text-gray-600 leading-relaxed">We stand behind our work with full transparency and responsibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">The Premier Roofing Difference</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Craftsmanship -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4">Expert Craftsmanship</h3>
+                    <p class="text-gray-600 leading-relaxed">Our skilled team delivers exceptional workmanship on every project.</p>
+                </div>
+
+                <!-- Service -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4">Superior Service</h3>
+                    <p class="text-gray-600 leading-relaxed">We go above and beyond to ensure complete customer satisfaction.</p>
+                </div>
+
+                <!-- Respect -->
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4">Mutual Respect</h3>
+                    <p class="text-gray-600 leading-relaxed">We treat every client and property with the utmost respect and care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold mb-3">How long does a typical roof installation take?</h3>
+                    <p class="text-gray-600">Most residential roofing projects are completed within 2-3 days, depending on the size and complexity of the roof.</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold mb-3">Do you offer warranties?</h3>
+                    <p class="text-gray-600">Yes, we offer comprehensive warranties on both materials and workmanship to ensure your peace of mind.</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-lg font-semibold mb-3">Are you insured and licensed?</h3>
+                    <p class="text-gray-600">Absolutely. We maintain full insurance coverage and all necessary licenses for roofing work in Calgary.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-blue-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Start Your Roofing Project?</h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">Contact us today for a free consultation and estimate.</p>
+            <a href="mailto:iainhmunro@gmail.com" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Premier Roofing</h3>
+                    <p class="text-gray-400">Calgary's trusted roofing experts since [year].</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+                    <a href="mailto:iainhmunro@gmail.com" class="block text-gray-400 hover:text-white transition-colors duration-300">iainhmunro@gmail.com</a>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Premier Roofing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
